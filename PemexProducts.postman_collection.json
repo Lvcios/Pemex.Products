@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "101a5c8b-69d7-40b6-9c5c-abd344da3704",
+		"name": "PemexProducts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Advertisement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Title",
+							"value": "Anuncio de prueba",
+							"type": "text"
+						},
+						{
+							"key": "Type",
+							"value": "Tipo 1",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "Picture",
+							"type": "file",
+							"src": "/D:/lucio/Pictures/pemexproducts/ibanez.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/v1/advertisement",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"v1",
+						"advertisement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/v1/advertisement/0e835986-62f8-400d-a80c-2720204d2f64",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"v1",
+						"advertisement",
+						"0e835986-62f8-400d-a80c-2720204d2f64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44338/api/v1/advertisement/page?page=1&sizePage=3&title=&minPrice=0&maxPrice=0&type=",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"v1",
+						"advertisement",
+						"page"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "sizePage",
+							"value": "3"
+						},
+						{
+							"key": "title",
+							"value": ""
+						},
+						{
+							"key": "minPrice",
+							"value": "0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "0"
+						},
+						{
+							"key": "type",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Lucio Flores",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lucio@localhost.com",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "mensaje sin validación alguna",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "test subject 3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/v1/notification/sendToAdmin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"v1",
+						"notification",
+						"sendToAdmin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

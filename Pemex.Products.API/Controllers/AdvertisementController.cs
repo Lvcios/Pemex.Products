@@ -14,8 +14,9 @@ using System.Threading.Tasks;
 
 namespace Pemex.Products.API.Controllers
 {
+    [ApiController]
     [Route("api/v1/[controller]")]
-    public class AdvertisementController : Controller
+    public class AdvertisementController : ControllerBase
     {
         private readonly IAdvertisementService _advertisementService;
         private readonly IMapper _mapper;
@@ -62,16 +63,8 @@ namespace Pemex.Products.API.Controllers
 
         [HttpGet]
         [Route("page")]
-        public async Task<IActionResult> GetAdvertisementPage(AdvertisementPageRequestModel pageRequest)
+        public async Task<IActionResult> GetAdvertisementPage([FromQuery] AdvertisementPageRequestModel pageRequest)
         {
-            if (!ModelState.IsValid)
-            {
-                var errors = ModelState.Select(x => x.Value.Errors)
-                           .Where(y => y.Count > 0)
-                           .ToList();
-                return BadRequest(errors);
-            }
-
             var pageQueryModel = _mapper.Map<AdvertisementPageQueryModel>(pageRequest);
             var page = await _advertisementService.GetAdvertisementPageAsync(pageQueryModel);
 

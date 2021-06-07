@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace Pemex.Products.API.Controllers
 {
+    [ApiController]
     [Route("api/v1/[controller]")]
-    public class NotificationController : Controller
+    public class NotificationController : ControllerBase
     {
         private IEmailNotificationService _emailNotificationService;
         private readonly IMapper _mapper;
@@ -21,11 +22,7 @@ namespace Pemex.Products.API.Controllers
             _emailNotificationService = emailNotificationService;
             _mapper = mapper;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        
         [HttpPost]
         [Route("sendToAdmin")]
         public async Task<IActionResult> SendEmailNotification([FromForm]ContactToAdminNotificationRequestModel request)
