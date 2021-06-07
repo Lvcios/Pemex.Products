@@ -20,14 +20,14 @@ namespace Pemex.Products.API.Util
             CreateMap<AdvertisementRequestModel, Advertisement>()
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Picture))
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Type))
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Price));
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price));
 
             CreateMap<Advertisement, AdvertisementResponseModel>()
                 .ForMember(dest => dest.PictureBase64 , opt => opt.MapFrom(src => src.Image))
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Type))
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Price));
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price));
 
             CreateMap<AdvertisementPageRequestModel, AdvertisementPageQueryModel>()
                 .ForMember(dest => dest.MaxPrice, opt => opt.MapFrom(src => src.MaxPrice))
