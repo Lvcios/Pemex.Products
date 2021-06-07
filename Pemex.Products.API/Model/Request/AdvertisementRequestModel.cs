@@ -17,7 +17,7 @@ namespace Pemex.Products.API.Model.Request
         [Required]
         public decimal Price { get; set; }
         [Required]
-        //[FileExtensions(Extensions = "jpg,png,gif,jpeg,bmp,svg")]
+        [Image]
         [MaxSize(512, ErrorMessage = "El tamaño de la imagen debe ser de 512kb o menor")]
         public IFormFile Picture { get; set; }
     }
