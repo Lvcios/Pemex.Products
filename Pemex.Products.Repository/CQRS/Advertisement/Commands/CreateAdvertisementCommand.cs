@@ -40,7 +40,6 @@ namespace Pemex.Products.Repository.CQRS.Advertisement.Commands
                         request.advertisement.Price,
                         request.advertisement.Image);
                 _unitOfWork.Commit();
-                _unitOfWork.DB.CloseSharedConnection();
                 var advertisementQuery = new ReadAdvertisementQuery.Query { Id = newId };
                 var advertisement = await _mediator.Send(advertisementQuery);
                 return advertisement;
