@@ -2,7 +2,7 @@
 
 El proyecto se realizó con netCore 3.1 y el framework webAPI.
 
-## Nuget Packeges usados
+## Nuget Packages usados
 
 1. Automapper: Para mapear objetos de los request hacia la base de datos y viceversa
 2. Mediatr: Para implementar el patron Mediator y CQRS
