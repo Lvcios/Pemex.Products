@@ -19,8 +19,8 @@ El proyecto se realizó con netCore 3.1 y el framework webAPI.
 
 1. Abrir el proyecto
 2. Ejecutar en IIS Express
-3. Esperar a que compiled
-4. El proyecto iniciará en la url `https://localhost:44338/api/v1/weatherforecast`
+3. Esperar a que compile e instale los nugets
+4. El proyecto iniciará en la url `https://localhost:44338/api/v1/weatherforecast` solo como prueba
 
 ## Lista de Endpoints
 1. `GET api/v1/weatherforecast` Prueba
