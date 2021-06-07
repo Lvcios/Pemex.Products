@@ -30,5 +30,13 @@ El proyecto se realizó con netCore 3.1 y el framework webAPI.
 5. `POST notification/sendToAdmin` Guarda una notificación de correo
 
 
+## Estructura de la solución
+
+La solución se divide en los siguientes proyectos:
+1. Pemex.Products.API: Endpoints, controladores y validaciones de objetos en solicitudes
+2. Pemex.Products.DAL: Data Access Layer. Incluye la abstracción para comunicarse con la base de datos y todos los modelos de tablas de base de datos
+3. Pemex.Products.Repository: Incluye todos los comandos de inserción en base de datos y recuperación de registros. Es donde se aplica el patrón CQRS.
+4. Pemex.Products.Service: Abstracción e implementación de la capa de servicios del proyecto.
+
 ## Extras
 1. Colección de Postman en archivo `PemexProducts.postman_collection.json`
