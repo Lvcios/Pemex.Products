@@ -24,11 +24,11 @@ El proyecto se realizó con netCore 3.1 y el framework webAPI.
 5. El proyecto iniciará en la url `https://localhost:44338/api/v1/weatherforecast` solo como prueba
 
 ## Lista de Endpoints
-1. `GET api/v1/weatherforecast` Prueba
+1. `GET  api/v1/weatherforecast` Prueba
 2. `POST api/v1/advertisement` Guarda un producto/anuncio
-3. `GET api/v1/advertisement/{UUID}` Obtener un producto/anuncio
-4. `GET api/v1/advertisement/page` Obtiene una página de productos
-5. `POST notification/sendToAdmin` Guarda una notificación de correo
+3. `GET  api/v1/advertisement/{UUID}` Obtener un producto/anuncio
+4. `GET  api/v1/advertisement/page` Obtiene una página de productos
+5. `POST api/v1/notification/sendToAdmin` Guarda una notificación de correo
 
 
 ## Estructura de la solución
