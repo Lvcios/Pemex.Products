@@ -18,9 +18,10 @@ El proyecto se realizó con netCore 3.1 y el framework webAPI.
 ## Como ejecutar
 
 1. Abrir el proyecto
-2. Ejecutar en IIS Express
-3. Esperar a que compile e instale los nugets
-4. El proyecto iniciará en la url `https://localhost:44338/api/v1/weatherforecast` solo como prueba
+2. Seleccionar como proyecto de inicio/"startup project" el proyecto `Pemex.Products.API`
+3. Ejecutar en IIS Express
+4. Esperar a que compile e instale los nugets
+5. El proyecto iniciará en la url `https://localhost:44338/api/v1/weatherforecast` solo como prueba
 
 ## Lista de Endpoints
 1. `GET api/v1/weatherforecast` Prueba
