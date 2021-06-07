@@ -40,3 +40,5 @@ La solución se divide en los siguientes proyectos:
 
 ## Extras
 1. Colección de Postman en archivo `PemexProducts.postman_collection.json`
+2. Script para creat tablas en base de datos
+
